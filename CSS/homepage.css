@@ -5,12 +5,13 @@ body {
 
 .hero {
     position: relative;
-    background: url("Images/image1.png") center/cover no-repeat;
-    height: 60vh;
+    background: url('../Images/image1.png') center/cover no-repeat;
+    height: 100vh; 
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    color: white;
 }
 
 .hero::before {
@@ -26,6 +27,12 @@ body {
 .hero .container {
     position: relative;
     z-index: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #F7F5F0;
 }
 
 footer p {
