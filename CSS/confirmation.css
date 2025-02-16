@@ -52,13 +52,14 @@ body {
 }
 
 .image-container {
-    width: 90%; 
-    height: 400px; 
+    width: 91%; 
+    height: 285px; 
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #ccc;
     border: 1px solid #888;
+    margin-bottom: 125px;
 }
 
 .confirmation-img {
