@@ -96,3 +96,22 @@ footer p {
     margin: 0;
     font-size: 0.9rem;
 }
+
+.back-btn {
+    width: 150px;
+    font-size: 1.2rem;
+    padding: 10px;
+    background-color: #3B3B3B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 150px;
+    margin-left: 20px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+}
+
+.back-btn:hover {
+    background-color: #666;
+}
