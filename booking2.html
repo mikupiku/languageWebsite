@@ -81,11 +81,15 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn continue-btn">Continue</button>
+            <button type="button" class="btn continue-btn" onclick="redirectToStudentInfo()">Continue</button>
         </form>
     </div>
 
     <button class="btn back-btn" onclick="window.history.back();">Back</button>
-
+    <script>
+        function redirectToStudentInfo() {
+            window.location.href = "studentInfo.html";
+        }
+        </script>
 </body>
 </html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Location - Service Name</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/studentInfo.css"> 
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">LanguageHelper</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link fw-bold" href="hours.html">Hours</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="location.html">Location</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="support.html">Support</a></li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+<div class="student-info-container">
+ <div class="container mt-4">
+ <h2 class="title">Student Information</h2>
+ <p class="subtitle">Please enter your information</p>
+ <div class="row">
+     <div class="col-md-6">
+         <form id="student-form">
+             <div class="row mb-3">
+                 <div class="col-md-6">
+                     <label for="first-name">First Name:</label>
+                     <input type="text" id="first-name" class="form-control" required>
+                 </div>
+                 <div class="col-md-6">
+                     <label for="last-name">Last Name:</label>
+                     <input type="text" id="last-name" class="form-control" required>
+                 </div>
+             </div>
+
+             <div class="row mb-3">
+                 <div class="col-md-6">
+                     <label for="email">Email:</label>
+                     <input type="email" id="email" class="form-control" required>
+                 </div>
+                 <div class="col-md-6">
+                     <label for="additional-info">Additional Information:</label>
+                     <input type="text" id="additional-info" class="form-control">
+                 </div>
+             </div>
+
+             <button type="submit" class="btn book-btn">Book</button>
+         </form>
+     </div>
+
+     <div class="col-md-6">
+         <div class="overview">
+             <h4>Overview</h4>
+             <p><strong>Language:</strong> French</p>
+             <p><strong>Teacher:</strong> John Doe</p>
+             <p><strong>Date:</strong> YYYY/MM/DD</p>
+             <p><strong>Time:</strong> HH:MM to HH:MM</p>
+             <p><strong>Model:</strong> In-Person</p>
+             <a href="booking.html" class="edit-link">Edit Booking</a>
+         </div>
+     </div>
+ </div>
+</div>
+</div>
+
+    <button type="button" class="btn back-btn" onclick="window.history.back();">Back</button>
+    <script>
+        document.getElementById("student-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            window.location.href = "booking-confirmation.html";
+        });
+    </script>
+</body>
+</html>
