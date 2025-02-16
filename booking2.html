@@ -88,8 +88,19 @@
     <button class="btn back-btn" onclick="window.history.back();">Back</button>
     <script>
         function redirectToStudentInfo() {
+            const language = document.getElementById("language").value;
+            const teacher = document.getElementById("teacher").value;
+            const date = document.getElementById("date").value;
+            const time = document.getElementById("timeslot").value;  
+            const model = document.getElementById("teaching-model").value;  
+    
+            localStorage.setItem("bookingLanguage", language);
+            localStorage.setItem("bookingTeacher", teacher);
+            localStorage.setItem("bookingDate", date);
+            localStorage.setItem("bookingTime", time);
+            localStorage.setItem("bookingModel", model);
             window.location.href = "studentInfo.html";
         }
-        </script>
+    </script>
 </body>
 </html>

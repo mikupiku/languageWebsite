@@ -54,7 +54,7 @@
                  </div>
              </div>
 
-             <button type="submit" class="btn book-btn">Book</button>
+             <button type="submit" class="btn book-btn" onclick="window.location.href='confirmation.html'">Book</button>
          </form>
      </div>
 
@@ -73,7 +73,7 @@
 </div>
 </div>
 
-    <button type="button" class="btn back-btn" onclick="window.history.back();">Back</button>
+    <button type="button" class="btn back-btn">Back</button>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("overview-language").textContent = localStorage.getItem("bookingLanguage") || "Not Selected";
@@ -85,7 +85,7 @@
 
         document.getElementById("student-form").addEventListener("submit", function(event) {
             event.preventDefault();
-            window.location.href = "booking-confirmation.html";
+            window.location.href = "confirmation.html";
         });
     </script>
 </body>

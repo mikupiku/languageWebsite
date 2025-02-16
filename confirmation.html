@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Location - Service Name</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/confirmation.css"> 
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">LanguageHelper</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link fw-bold" href="hours.html">Hours</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="location.html">Location</a></li>
+                <li class="nav-item"><a class="nav-link fw-bold" href="support.html">Support</a></li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+        
+        <div class="container confirmation-container">
+        <h2 class="title">Booking Confirmed</h2>
+        <p class="subtitle">
+            Thank you! Your booking information has been received, and you will receive a confirmation email shortly.
+            Please see below for details of your session.
+        </p>
+
+        <div class="row">
+            <div class="col-md-8">
+                <p><strong>Booking ID:</strong> <span id="booking-id">XXXXXXXX</span></p>
+                <p><strong>Time:</strong> <span id="booking-time">HH:MM to HH:MM</span></p>
+                <p><strong>Date:</strong> <span id="booking-date">YYYY/MM/DD</span></p>
+                <p><strong>Overview:</strong> <span id="booking-overview">French In-Person with John Doe</span></p>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="image-container">
+                    <img src="https://raw.githubusercontent.com/mikupiku/languageWebsite/refs/heads/main/Images/contact.png" alt="confirmation img" class="confirmation-img">
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn back-btn" onclick="window.location.href='index.html';">Back</button>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("booking-time").textContent = localStorage.getItem("bookingTime") || "HH:MM to HH:MM";
+            document.getElementById("booking-date").textContent = localStorage.getItem("bookingDate") || "YYYY/MM/DD";
+            const language = localStorage.getItem("bookingLanguage") || "French";
+            const model = localStorage.getItem("bookingModel") || "In-Person";
+            const teacher = localStorage.getItem("bookingTeacher") || "John Doe";
+            document.getElementById("booking-overview").textContent = `${language} ${model} with ${teacher}`;
+        });
+    </script>
+
+</body>
+</html>
