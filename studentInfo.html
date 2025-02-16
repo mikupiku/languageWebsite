@@ -61,11 +61,11 @@
      <div class="col-md-6">
          <div class="overview">
              <h4>Overview</h4>
-             <p><strong>Language:</strong> French</p>
-             <p><strong>Teacher:</strong> John Doe</p>
-             <p><strong>Date:</strong> YYYY/MM/DD</p>
-             <p><strong>Time:</strong> HH:MM to HH:MM</p>
-             <p><strong>Model:</strong> In-Person</p>
+             <p><strong>Language:</strong> <span id="overview-language">French</span></p>
+             <p><strong>Teacher:</strong> <span id="overview-teacher">John Doe</span></p>
+             <p><strong>Date:</strong> <span id="overview-date">YYYY/MM/DD</span></p>
+             <p><strong>Time:</strong> <span id="overview-time">HH:MM to HH:MM</span></p>
+             <p><strong>Model:</strong> <span id="overview-model">In-Person</span></p>
              <a href="booking.html" class="edit-link">Edit Booking</a>
          </div>
      </div>
@@ -75,6 +75,14 @@
 
     <button type="button" class="btn back-btn" onclick="window.history.back();">Back</button>
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("overview-language").textContent = localStorage.getItem("bookingLanguage") || "Not Selected";
+            document.getElementById("overview-teacher").textContent = localStorage.getItem("bookingTeacher") || "Not Selected";
+            document.getElementById("overview-date").textContent = localStorage.getItem("bookingDate") || "Not Selected";
+            document.getElementById("overview-time").textContent = localStorage.getItem("bookingTime") || "Not Selected";
+            document.getElementById("overview-model").textContent = localStorage.getItem("bookingModel") || "Not Selected";
+        });
+
         document.getElementById("student-form").addEventListener("submit", function(event) {
             event.preventDefault();
             window.location.href = "booking-confirmation.html";
