@@ -76,8 +76,8 @@ body {
 }
 
 .map-container {
-    width: 37%; 
-    height: 400px; 
+    width: 600px; 
+    height: 450px; 
     display: flex;
     align-items: center;
     justify-content: center;
