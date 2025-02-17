@@ -97,7 +97,9 @@
             const date = document.getElementById("date").value;
             const time = document.getElementById("timeslot").value;  
             const model = document.getElementById("teaching-model").value;  
+            const bookingId = Math.floor(10000000 + Math.random() * 90000000);
     
+            localStorage.setItem("bookingId", bookingId);
             localStorage.setItem("bookingLanguage", language);
             localStorage.setItem("bookingTeacher", teacher);
             localStorage.setItem("bookingDate", date);

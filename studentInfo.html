@@ -54,7 +54,7 @@
                  </div>
              </div>
 
-             <button type="submit" class="btn book-btn" onclick="window.location.href='confirmation.html'">Book</button>
+             <button type="submit" class="btn book-btn">Book</button>
          </form>
      </div>
 
@@ -73,20 +73,20 @@
 </div>
 </div>
 
-    <button type="button" class="btn back-btn">Back</button>
+    <button type="button" class="btn back-btn" onclick="history.back()">Back</button>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("overview-language").textContent = localStorage.getItem("bookingLanguage") || "Not Selected";
-            document.getElementById("overview-teacher").textContent = localStorage.getItem("bookingTeacher") || "Not Selected";
-            document.getElementById("overview-date").textContent = localStorage.getItem("bookingDate") || "Not Selected";
-            document.getElementById("overview-time").textContent = localStorage.getItem("bookingTime") || "Not Selected";
-            document.getElementById("overview-model").textContent = localStorage.getItem("bookingModel") || "Not Selected";
-        });
-
-        document.getElementById("student-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            window.location.href = "confirmation.html";
-        });
+            document.getElementById("student-form").addEventListener("submit", function (event) {
+                event.preventDefault();
+                const firstName = document.getElementById("first-name").value;
+                const lastName = document.getElementById("last-name").value;
+                const email = document.getElementById("email").value;
+                const additionalInfo = document.getElementById("additional-info").value;
+                localStorage.setItem("bookingFirstName", firstName);
+                localStorage.setItem("bookingLastName", lastName);
+                localStorage.setItem("bookingEmail", email);
+                localStorage.setItem("bookingAdditionalInfo", additionalInfo);
+                window.location.href = "confirmation.html"; 
+            });
     </script>
 </body>
 </html>

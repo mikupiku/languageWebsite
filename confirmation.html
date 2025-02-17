@@ -38,7 +38,11 @@
                 <p><strong>Booking ID:</strong> <span id="booking-id">XXXXXXXX</span></p>
                 <p><strong>Time:</strong> <span id="booking-time">HH:MM to HH:MM</span></p>
                 <p><strong>Date:</strong> <span id="booking-date">YYYY/MM/DD</span></p>
-                <p><strong>Overview:</strong> <span id="booking-overview">French In-Person with John Doe</span></p>
+                <p><strong>Overview:</strong> <span id="booking-overview">Language In-Person with FirstName LastName</span></p>
+                <p><strong>First Name:</strong> <span id="booking-first-name">First Name</span></p>
+                <p><strong>Last Name:</strong> <span id="booking-last-name">Last Name</span></p>
+                <p><strong>Email:</strong> <span id="booking-email">Email</span></p>
+                <p><strong>Additional Info:</strong> <span id="booking-additional-info">None</span></p>
             </div>
             <div class="col-md-4 text-center">
                 <div class="image-container">
@@ -50,12 +54,17 @@
     <button type="button" class="btn back-btn" onclick="window.location.href='index.html';">Back</button>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("booking-id").textContent = localStorage.getItem("bookingId") || "XXXXXXXX";
             document.getElementById("booking-time").textContent = localStorage.getItem("bookingTime") || "HH:MM to HH:MM";
             document.getElementById("booking-date").textContent = localStorage.getItem("bookingDate") || "YYYY/MM/DD";
-            const language = localStorage.getItem("bookingLanguage") || "French";
+            const language = localStorage.getItem("bookingLanguage") || "Language";
             const model = localStorage.getItem("bookingModel") || "In-Person";
-            const teacher = localStorage.getItem("bookingTeacher") || "John Doe";
+            const teacher = localStorage.getItem("bookingTeacher") || "FirstName LastName";
             document.getElementById("booking-overview").textContent = `${language} ${model} with ${teacher}`;
+            document.getElementById("booking-first-name").textContent = localStorage.getItem("bookingFirstName") || "First Name";
+            document.getElementById("booking-last-name").textContent = localStorage.getItem("bookingLastName") || "Last Name";
+            document.getElementById("booking-email").textContent = localStorage.getItem("bookingEmail") || "Email";
+            document.getElementById("booking-additional-info").textContent = localStorage.getItem("bookingAdditionalInfo") || "None";
         });
     </script>
 
