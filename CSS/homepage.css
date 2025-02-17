@@ -50,14 +50,3 @@ body {
     position: relative;
     z-index: 1;
 }
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #F7F5F0;
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
-}

@@ -85,18 +85,6 @@ body {
     background-color: #575757;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #F7F5F0;
-    border-top: 3px solid #C6A961;
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
-}
-
 .back-btn {
     width: 150px;
     font-size: 1.2rem;
