@@ -75,6 +75,12 @@
 
     <button type="button" class="btn back-btn" onclick="history.back()">Back</button>
     <script>
+            document.getElementById("overview-language").textContent = localStorage.getItem("bookingLanguage") || "Not Selected";
+            document.getElementById("overview-teacher").textContent = localStorage.getItem("bookingTeacher") || "Not Selected";
+            document.getElementById("overview-date").textContent = localStorage.getItem("bookingDate") || "YYYY/MM/DD";
+            document.getElementById("overview-time").textContent = localStorage.getItem("bookingTime") || "HH:MM to HH:MM";
+            document.getElementById("overview-model").textContent = localStorage.getItem("bookingModel") || "Not Selected";
+    
             document.getElementById("student-form").addEventListener("submit", function (event) {
                 event.preventDefault();
                 const firstName = document.getElementById("first-name").value;
